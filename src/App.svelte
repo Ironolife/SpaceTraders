@@ -1,30 +1,24 @@
 <script lang="ts">
-	export let name: string;
+  import Footer from './components/Footer/Footer.svelte';
+  import Header from './components/Header/Header.svelte';
+  import { route, userData } from './stores';
+  import Tailwind from './styles/Tailwind.svelte';
+  import router from './utils/router';
+  import Auth from './components/Auth.svelte';
+
+  router.listen();
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<Tailwind />
+
+<Header />
+<main class="py-8 px-4" style="flex: 1 0 auto;">
+  {#if $userData}
+    <svelte:component this={$route.component} />
+  {/if}
 </main>
+<Footer />
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+{#if !$userData}
+  <Auth />
+{/if}
