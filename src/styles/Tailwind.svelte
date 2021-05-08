@@ -19,6 +19,9 @@
     }
   }
 
+  * {
+    touch-action: manipulation;
+  }
   html {
     @apply h-full overflow-y-scroll;
   }
