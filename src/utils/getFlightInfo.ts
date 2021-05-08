@@ -1,7 +1,7 @@
 import type { Location, UserShip } from '../types';
 
 const getFlightInfo = (
-  { type, speed }: UserShip,
+  { class: _class, speed }: UserShip,
   fromLocation: Location,
   toLocation: Location
 ): { distance: number; fuelRequired: number; duration: number } => {
@@ -12,10 +12,10 @@ const getFlightInfo = (
   );
 
   const locationPenalty = fromLocation.type === 'PLANET' ? 2 : 0;
-  const shipTypePenalty = type === 'MK-II' ? 1 : type === 'MK-III' ? 2 : 0;
+  const shipClassPenalty = _class === 'MK-II' ? 1 : _class === 'MK-III' ? 2 : 0;
 
   const fuelRequired =
-    Math.round(distance / 4) + locationPenalty + shipTypePenalty + 1;
+    Math.round(distance / 4) + locationPenalty + shipClassPenalty + 1;
 
   const duration = Math.round(distance * (2 / speed) + 60);
 
