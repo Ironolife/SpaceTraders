@@ -67,4 +67,19 @@
       class="absolute inset-0 bg-gradient-to-br from-green-500 to-yellow-400 opacity-90"
     />
   </Banner>
+  <a
+    class="md:col-span-2"
+    href="https://spacetraders.io/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Banner>
+      <span slot="text">SpaceTraders API</span>
+      <span slot="icon">📖</span>
+      <div
+        slot="background"
+        class="absolute inset-0 bg-gradient-to-br from-pink-500 to-yellow-700 opacity-90"
+      />
+    </Banner>
+  </a>
 </div>
