@@ -35,7 +35,7 @@
 {#if currentLocation.symbol !== location.symbol}
   <InfoList
     entries={[
-      { key: 'Distance', value: distance.toFixed(1) },
+      { key: 'Distance', value: `~${distance.toFixed(0)}` },
       { key: 'Duration', value: `${duration}s` },
       { key: 'Fuel Required', value: fuelRequired.toFixed(0) },
     ]}

@@ -38,7 +38,7 @@
 <Card>
   <div class="relative">
     <div class="relative flex justify-center space-x-8 text-2xl font-bold z-10">
-      <span>📍 {distance}</span>
+      <span>📍 ~{distance.toFixed(0)}</span>
       <span class="md:hidden flex-1" />
       <span>⏳ {timeRemaining}s</span>
     </div>
