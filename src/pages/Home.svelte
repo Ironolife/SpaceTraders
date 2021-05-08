@@ -1,7 +1,7 @@
 <script>
   import dayjs from 'dayjs';
   import relativeTime from 'dayjs/plugin/relativeTime';
-  import Banner from '../components/Common/Banner.svelte';
+  import Banner from '../components/Common/Banner/Banner.svelte';
   import { userData } from '../stores';
   import router from '../utils/router';
   dayjs.extend(relativeTime);
@@ -67,13 +67,8 @@
       class="absolute inset-0 bg-gradient-to-br from-green-500 to-yellow-400 opacity-90"
     />
   </Banner>
-  <a
-    class="md:col-span-2"
-    href="https://spacetraders.io/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <Banner>
+  <div class="md:col-span-2">
+    <Banner href="https://spacetraders.io/">
       <span slot="text">SpaceTraders API</span>
       <span slot="icon">📖</span>
       <div
@@ -81,5 +76,5 @@
         class="absolute inset-0 bg-gradient-to-br from-pink-500 to-yellow-700 opacity-90"
       />
     </Banner>
-  </a>
+  </div>
 </div>

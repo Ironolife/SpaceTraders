@@ -1,13 +1,13 @@
 <script lang="ts">
+  import BannerWrapper from './BannerWrapper.svelte';
+
   export let isIconFirst: boolean = true;
+  export let href: string;
 </script>
 
-<button
-  class="relative w-full h-48 md:h-56 rounded overflow-hidden shadow-lg filter hover:brightness-110 active:brightness-90"
-  on:click
->
+<BannerWrapper {href} on:click>
   <div
-    class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0"
+    class="h-full flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0"
   >
     <div
       class="relative text-5xl md:text-7xl z-10 {isIconFirst
@@ -26,4 +26,4 @@
     </div>
   </div>
   <slot name="background" />
-</button>
+</BannerWrapper>

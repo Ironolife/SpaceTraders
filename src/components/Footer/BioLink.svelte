@@ -1,5 +1,5 @@
-<span
-  ><a
+<span>
+  <a
     href="https://github.com/Ironolife/SpaceTraders"
     target="_blank"
     rel="noreferrer">Made with 💜 by Ironolife</a
