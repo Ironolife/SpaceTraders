@@ -15,7 +15,7 @@
 <div class="grid grid-col-1 xl:grid-cols-2 gap-4">
   {#if !loanDueDate}
     <Banner on:click={() => router.route('/loans')}>
-      <span slot="text">Low on credits?<br />Get a loan!</span>
+      <span slot="text">Low on credits?<br />Take a loan!</span>
       <span slot="icon">💵</span>
       <div
         slot="background"

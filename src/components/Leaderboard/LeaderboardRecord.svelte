@@ -14,7 +14,18 @@
   <span
     class="flex-1 flex flex-col space-y-4 md:space-y-0 md:flex-row text-right md:text-left"
   >
-    <span class="flex-1 text-lg md:text-xl whitespace-nowrap">{username}</span>
-    <span class="text-xl md:text-2xl">{netWorth} 💵</span>
+    <span class="flex-1 text-lg md:text-xl whitespace-nowrap">
+      {username}
+    </span>
+    <span class="text-xl md:text-2xl">
+      {#if rank === 1}
+        🥇
+      {:else if rank === 2}
+        🥈
+      {:else if rank === 3}
+        🥉
+      {/if}
+      {netWorth} 💵
+    </span>
   </span>
 </div>

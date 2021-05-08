@@ -10,10 +10,22 @@ export const getLocationIcon = (type: string): string => {
 };
 
 const itemIconMap = new Map<string, string>([
-  ['DRONES', '🤖'],
+  ['DRONES', '🛩️'],
   ['MACHINERY', '⚙️'],
   ['FUEL', '⛽'],
   ['FUSIION_REACTORS', '☢️'],
+  ['RESEARCH', '🔬'],
+  ['TEXTILES', '👗'],
+  ['FOOD', '🍖'],
+  ['CONSTRUCTION_MATERIALS', '🧱'],
+  ['UNSTABLE_COMPOUNDS', '🧪'],
+  ['CHEMICALS', '🧪'],
+  ['EXPLOSIVES', '🧨'],
+  ['NARCOTICS', '💊'],
+  ['ELECTRONICS', '🔌'],
+  ['BIOMETRIC_FIREARMS', '🔫'],
+  ['NANOBOTS', '🤖'],
+  ['SHIP_PLATING', '🛡️'],
 ]);
 
 export const getItemIcon = (symbol: string): string => {
