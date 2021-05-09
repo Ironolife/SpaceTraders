@@ -126,7 +126,7 @@ export type FlightPlan = {
 
 export type LeaderBoard = {
   netWorth: LeaderBoardRecord[];
-  userNetWorth: LeaderBoardRecord[];
+  userNetWorth: LeaderBoardRecord;
 };
 
 export type LeaderBoardRecord = {

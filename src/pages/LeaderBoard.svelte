@@ -23,9 +23,9 @@
       {#each leaderboard.netWorth as record (record.username)}
         <LeaderboardRecord {record} />
       {/each}
-      {#if leaderboard.userNetWorth[0].rank > 10}
+      {#if leaderboard.userNetWorth?.rank > 10}
         <div class="py-6 text-center text-3xl">···</div>
-        <LeaderboardRecord record={leaderboard.userNetWorth[0]} />
+        <LeaderboardRecord record={leaderboard.userNetWorth} />
       {/if}
     </div>
   </section>
